@@ -1,9 +1,9 @@
 
 
-const DeleteButton = () => {
+const DeleteButton = ({ deleteFunc }) => {
   return (
     <td>
-      <button>DeleteButton</button>
+      <button onClick={deleteFunc}>DeleteButton</button>
     </td>
   )
 }
