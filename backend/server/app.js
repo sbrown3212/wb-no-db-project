@@ -21,5 +21,8 @@ app.get('/api/items', handlerFunctions.getItems);
 // Deletes a row based on id
 app.delete('/api/deleteItem/:id', handlerFunctions.deleteItem);
 
+// Adds item to DATA
+app.post('/api/addItem', handlerFunctions.addItem)
+
 // Open door to server
 ViteExpress.listen(app, 8080, console.log(`Server running at http://localhost:8080`));
