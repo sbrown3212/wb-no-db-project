@@ -1,4 +1,4 @@
-const MOCKUP_DATA = [
+let MOCKUP_DATA = [
   {
     "id": 0,
     "imgURL": "https://www.jensonusa.com/globalassets/product-images---all-assets/oneup-components/hb001019-800mm-35mm-rise.jpg",
