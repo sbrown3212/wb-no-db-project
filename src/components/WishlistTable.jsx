@@ -1,6 +1,6 @@
 import TableHeader from "./TableHeader"
 import TableRow from "./ItemRow"
-import AddItemButton from "./AddItemButton"
+import AddItemButton from "./ItemComponents/AddItemButton"
 
 const WishlistTable = () => {
   return (
