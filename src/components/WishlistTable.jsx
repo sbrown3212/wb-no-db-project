@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import TableHeader from "./TableHeader"
 import ItemRow from "./ItemRow"
-import AddItemButton from "./ItemComponents/AddItemButton"
+import AddItemButton from "./AddItemButton"
 import axios from "axios"
 
 const WishlistTable = ({ initialData }) => {
