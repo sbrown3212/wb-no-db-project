@@ -15,7 +15,11 @@ app.use(express.json());
 import handlerFunctions from './controller.js';
 
 // Routes
+// Gets data to populate table
 app.get('/api/items', handlerFunctions.getItems);
+
+// Deletes a row based on id
+app.delete('/api/deleteItem/:id', handlerFunctions.deleteItem);
 
 // Open door to server
 ViteExpress.listen(app, 8080, console.log(`Server running at http://localhost:8080`));
