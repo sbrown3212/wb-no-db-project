@@ -15,7 +15,7 @@ app.use(express.json());
 import handlerFunctions from './controller.js';
 
 // Routes
-app.get('api/items', handlerFunctions.getItems);
+app.get('/api/items', handlerFunctions.getItems);
 
 // Open door to server
 ViteExpress.listen(app, 8080, console.log(`Server running at http://localhost:8080`));
