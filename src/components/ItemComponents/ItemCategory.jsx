@@ -1,10 +1,8 @@
 
 
-const ItemCategory = () => {
+const ItemCategory = ({ itemCategory }) => {
   return (
-    <td>
-      ItemCategory
-    </td>
+    <td>{itemCategory}</td>
   )
 }
 

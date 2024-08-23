@@ -1,9 +1,9 @@
 
 
-const Img = () => {
+const Img = ({ imgURL }) => {
   return (
     <td>
-      <img src="" alt="Img placeholder" />
+      <img src={imgURL} alt="Img placeholder" width="200px" />
     </td>
   )
 }

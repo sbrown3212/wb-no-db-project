@@ -1,10 +1,8 @@
 
 
-const ItemPrice = () => {
+const ItemPrice = ({ itemPrice }) => {
   return (
-    <td>
-      ItemPrice
-    </td>
+    <td>${itemPrice}</td>
   )
 }
 

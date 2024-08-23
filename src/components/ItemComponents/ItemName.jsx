@@ -1,9 +1,9 @@
 
 
-const ItemName = () => {
+const ItemName = ({ itemName, itemURL }) => {
   return (
     <td>
-      ItemName
+      <a href={itemURL}>{itemName}</a>
     </td>
   )
 }
