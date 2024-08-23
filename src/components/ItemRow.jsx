@@ -4,16 +4,37 @@ import ItemName from './ItemComponents/ItemName.jsx'
 import ItemPrice from './ItemComponents/ItemPrice.jsx'
 import ItemCategory from './ItemComponents/ItemCategory.jsx'
 import DeleteButton from './ItemComponents/DeleteButton.jsx'
+import { useState } from 'react'
 
 const ItemRow = ({ imgURL, itemName, itemURL, itemPrice, itemCategory, deleteFunc }) => {
+  const [editMode, setEditMode] = useState(true);
+
   return (
     <tr>
-      <EditButton />
-      <Img imgURL={imgURL} />
-      <ItemName itemName={itemName} itemURL={itemURL} />
-      <ItemPrice itemPrice={itemPrice} />
-      <ItemCategory itemCategory={itemCategory} />
-      <DeleteButton deleteFunc={deleteFunc} />
+      <EditButton
+        inEditMode={editMode}
+      />
+      <Img
+        imgURL={imgURL}
+        inEditMode={editMode}
+      />
+      <ItemName
+        itemName={itemName}
+        itemURL={itemURL}
+        inEditMode={editMode}
+      />
+      <ItemPrice
+        itemPrice={itemPrice}
+        inEditMode={editMode}
+      />
+      <ItemCategory
+        itemCategory={itemCategory}
+        inEditMode={editMode}
+      />
+      <DeleteButton
+        deleteFunc={deleteFunc}
+        inEditMode={editMode}
+      />
     </tr>
   )
 }

@@ -1,6 +1,6 @@
 
 
-const Img = ({ imgURL }) => {
+const Img = ({ imgURL, inEditMode }) => {
   return inEditMode ? (
     <td>
       <input

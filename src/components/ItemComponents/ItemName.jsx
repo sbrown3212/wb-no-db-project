@@ -1,6 +1,6 @@
 
 
-const ItemName = ({ itemName, itemURL }) => {
+const ItemName = ({ itemName, itemURL, inEditMode }) => {
   return inEditMode ? (
     <td>
       <input

@@ -1,6 +1,6 @@
 
 
-const ItemPrice = ({ itemPrice }) => {
+const ItemPrice = ({ itemPrice, inEditMode }) => {
   return inEditMode ? (
     <td>
       <input

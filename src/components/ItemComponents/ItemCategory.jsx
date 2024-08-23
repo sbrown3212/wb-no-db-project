@@ -1,6 +1,6 @@
 
 
-const ItemCategory = ({ itemCategory }) => {
+const ItemCategory = ({ itemCategory, inEditMode }) => {
   return inEditMode ? (
     <td>
       <input

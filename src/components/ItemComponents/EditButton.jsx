@@ -1,6 +1,6 @@
 
 
-const EditButton = () => {
+const EditButton = ({ inEditMode }) => {
   return inEditMode ? (
     <td>
       <button>Save</button>
