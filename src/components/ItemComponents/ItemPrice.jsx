@@ -1,15 +1,15 @@
 
 
-const ItemPrice = ({ itemPrice, inEditMode }) => {
+const ItemPrice = ({ value, inEditMode, setItemPrice }) => {
   return inEditMode ? (
     <td>
-      <input
+      <input onChange={(e) => setItemPrice(e.target.value)}
         type="text"
         placeholder="Price"
       />
     </td>
   ) : (
-    <td>${itemPrice}</td>
+    <td>${value}</td>
   )
 }
 

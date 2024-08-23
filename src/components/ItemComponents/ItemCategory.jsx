@@ -1,15 +1,15 @@
 
 
-const ItemCategory = ({ itemCategory, inEditMode }) => {
+const ItemCategory = ({ value, inEditMode, setItemCategory }) => {
   return inEditMode ? (
     <td>
-      <input
+      <input onChange={(e) => setItemCategory(e.target.value)}
         type="text"
         placeholder="Category"
       />
     </td>
   ) : (
-    <td>{itemCategory}</td>
+    <td>{value}</td>
   )
 }
 

@@ -3,7 +3,7 @@
 const DeleteButton = ({ deleteFunc }) => {
   return (
     <td>
-      <button onClick={deleteFunc}>DeleteButton</button>
+      <button onClick={deleteFunc}>Delete</button>
     </td>
   )
 }

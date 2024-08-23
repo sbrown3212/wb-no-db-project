@@ -1,20 +1,20 @@
 
 
-const ItemName = ({ itemName, itemURL, inEditMode }) => {
+const ItemName = ({ value, itemURL, inEditMode, setItemName, setItemURL }) => {
   return inEditMode ? (
     <td>
-      <input
+      <input onChange={(e) => setItemName(e.target.value)}
         type="text"
         placeholder="Name"
       />
-      <input
+      <input onChange={(e) => setItemURL(e.target.value)}
         type="text"
         placeholder="Item URL"
       />
     </td>
   ) :(
     <td>
-      <a href={itemURL}>{itemName}</a>
+      <a href={itemURL}>{value}</a>
     </td>
   )
 }

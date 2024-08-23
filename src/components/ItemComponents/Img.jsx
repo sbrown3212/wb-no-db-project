@@ -1,9 +1,10 @@
 
 
-const Img = ({ imgURL, inEditMode }) => {
+const Img = ({ value, inEditMode, setImageURL }) => {
   return inEditMode ? (
     <td>
-      <input
+      <input onChange={(e) => setImageURL(e.target.value)}
+        value={value}
         type="text"
         placeholder="Image URL"
       />
