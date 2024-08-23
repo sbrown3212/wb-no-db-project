@@ -1,11 +1,11 @@
 
 
-const AddItemButton = () => {
+const AddItemButton = ({ addFunc }) => {
   return (
     <tr>
       <td></td>
       <td colSpan={4}>
-        <button>AddItemButton</button>
+        <button onClick={addFunc}>AddItemButton</button>
       </td>
     </tr>
   )

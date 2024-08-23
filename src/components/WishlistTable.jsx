@@ -27,7 +27,7 @@ const WishlistTable = ({ initialData }) => {
     );
   });
 
-  // Makes api call to delete item based on item id
+  // Makes DELETE API call to delete item based on item id
   const deleteItem = (id) => {
     axios.delete(`/api/deleteItem/${id}`)
     .then((res) => {
@@ -35,6 +35,25 @@ const WishlistTable = ({ initialData }) => {
       setCurrentData(res.data.updatedItems);
     });
   };
+
+  // Makes POST API call to add new item to wishlist
+  // QUESTION: For the project requirements, I am using post, but is it necessary to be sending an object? I mean, why not have the server create an object with blank values rather than send it over in a POST request?
+  const addItem = () => {
+    const newItem = {
+      imgURL: '',
+      itemName: '',
+      itemURL: '',
+      itemPrice: '',
+      itemCategory: ''
+    }
+
+    // Make POST request and set currentData to DATA array received in response
+    axios.post('/api/addItem', newItem)
+    .then((res) => {
+      console.log(`res.data`, res.data);
+      setCurrentData(res.data.updatedItems);
+    })
+  }
 
   return (
     <>
@@ -52,7 +71,7 @@ const WishlistTable = ({ initialData }) => {
         </tbody>
 
         <tfoot>
-          <AddItemButton />
+          <AddItemButton addFunc={addItem} />
         </tfoot>
       </table>
     </>
