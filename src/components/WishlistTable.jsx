@@ -17,11 +17,12 @@ const WishlistTable = ({ initialData }) => {
     return (
       <ItemRow
         key={item.id}
-        imgURL={item.imgURL}
-        itemName={item.itemName}
-        itemURL={item.itemURL}
-        itemPrice={item.itemPrice}
-        itemCategory={item.itemCategory}
+        // imgURL={item.imgURL}
+        // itemName={item.itemName}
+        // itemURL={item.itemURL}
+        // itemPrice={item.itemPrice}
+        // itemCategory={item.itemCategory}
+        itemData={item}
         deleteFunc={() => deleteItem(item.id)}
       />
     );
