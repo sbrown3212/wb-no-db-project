@@ -1,9 +1,13 @@
 
 
 const EditButton = () => {
-  return (
+  return inEditMode ? (
     <td>
-      <button>EditButton</button>
+      <button>Save</button>
+    </td>
+  ) : (
+    <td>
+      <button>Edit</button>
     </td>
   )
 }

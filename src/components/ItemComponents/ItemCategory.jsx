@@ -1,7 +1,14 @@
 
 
 const ItemCategory = ({ itemCategory }) => {
-  return (
+  return inEditMode ? (
+    <td>
+      <input
+        type="text"
+        placeholder="Category"
+      />
+    </td>
+  ) : (
     <td>{itemCategory}</td>
   )
 }

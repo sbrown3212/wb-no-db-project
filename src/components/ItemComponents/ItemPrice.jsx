@@ -1,7 +1,14 @@
 
 
 const ItemPrice = ({ itemPrice }) => {
-  return (
+  return inEditMode ? (
+    <td>
+      <input
+        type="text"
+        placeholder="Price"
+      />
+    </td>
+  ) : (
     <td>${itemPrice}</td>
   )
 }
