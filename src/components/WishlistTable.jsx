@@ -1,8 +1,30 @@
+import { useEffect, useState } from "react"
 import TableHeader from "./TableHeader"
-import TableRow from "./ItemRow"
+import ItemRow from "./ItemRow"
 import AddItemButton from "./ItemComponents/AddItemButton"
 
-const WishlistTable = () => {
+const WishlistTable = ({ initialData }) => {
+  const [currentData, setCurrentData] = useState(initialData);
+
+  // Set 'currentData' to 'initialData' anytime 'initialData' changes
+  useEffect(() => {
+    setCurrentData(initialData);
+  }, [initialData]);
+
+  // Create array of 'itemRow' components based on data from 'currentData'
+  const itemRows = currentData.map((item) => {
+    return (
+      <ItemRow
+        key={item.id}
+        imgURL={item.imgURL}
+        itemName={item.itemName}
+        itemURL={item.itemURL}
+        itemPrice={item.itemPrice}
+        itemCategory={item.itemCategory}
+      />
+    );
+  });
+
   return (
     <>
       WishlistTable
@@ -12,9 +34,10 @@ const WishlistTable = () => {
         </thead>
 
         <tbody>
-          <TableRow />
-          <TableRow />
-          <TableRow />
+          {/* <ItemRow />
+          <ItemRow />
+          <ItemRow /> */}
+          {itemRows}
         </tbody>
 
         <tfoot>
