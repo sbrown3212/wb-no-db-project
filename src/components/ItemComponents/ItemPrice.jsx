@@ -4,6 +4,7 @@ const ItemPrice = ({ value, inEditMode, setItemPrice }) => {
   return inEditMode ? (
     <td>
       <input onChange={(e) => setItemPrice(e.target.value)}
+        value={value}
         type="text"
         placeholder="Price"
       />

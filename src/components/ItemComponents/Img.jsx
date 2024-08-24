@@ -11,7 +11,7 @@ const Img = ({ value, inEditMode, setImageURL }) => {
     </td>
   ) : (
     <td>
-      <img src={imgURL} alt="Img placeholder" width="200px" />
+      <img src={value} alt="Img placeholder" width="200px" />
     </td>
   )
 }

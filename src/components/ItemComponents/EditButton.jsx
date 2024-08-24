@@ -1,13 +1,13 @@
 
 
-const EditButton = ({ inEditMode }) => {
+const EditButton = ({ inEditMode, toEditFunc, toSavedFunc }) => {
   return inEditMode ? (
     <td>
-      <button>Save</button>
+      <button onClick={toSavedFunc}>Save</button>
     </td>
   ) : (
     <td>
-      <button>Edit</button>
+      <button onClick={toEditFunc}>Edit</button>
     </td>
   )
 }
