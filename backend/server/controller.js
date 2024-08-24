@@ -51,6 +51,34 @@ const handlerFunctions = {
       message: "Item added successfully",
       updatedItems: DATA
     })
+  },
+
+  editItem: (req, res) => {
+    // assign values from request body to local variables
+    const { id, imgURL, itemName, itemURL, itemPrice, itemCategory } = req.body;
+
+    // Get index of wishlist item using the item id
+    const index = DATA.findIndex((item) => item.id === id);
+
+    // Get data for item to be edited
+    const item = DATA[index];
+    console.log();
+    console.log(`ITEM TO BE EDITED`, DATA[index]);
+    
+    // Save new data to 'item' object variable
+    item.imgURL = imgURL ?? item.imgURL;
+    item.itemName = itemName ?? item.itemName;
+    item.itemURL = itemURL ?? item.itemURL;
+    item.itemPrice = +itemPrice ?? item.itemPrice;
+    item.itemCategory = itemCategory ?? item.itemCategory;
+    
+    console.log(`ITEM AFTER EDITS`, DATA[index]);
+    console.log();
+
+    res.send({
+      message: "Item data updated",
+      updatedItem: item
+    })
   }
 }
 
