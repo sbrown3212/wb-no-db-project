@@ -1,4 +1,4 @@
-
+import './Img.css'
 
 const Img = ({ value, inEditMode, setImageURL }) => {
   return inEditMode ? (
@@ -11,7 +11,9 @@ const Img = ({ value, inEditMode, setImageURL }) => {
     </td>
   ) : (
     <td>
-      <img src={value} alt="Img placeholder" width="200px" />
+      <div className="img-container">
+        <img src={value} alt="Img placeholder" />
+      </div>
     </td>
   )
 }
