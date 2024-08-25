@@ -22,7 +22,7 @@ const handlerFunctions = {
 
     // Send response to delete API call
     res.send({
-      message: "Item successfully deleted",
+      message: "Item deleted successfully",
       updatedItems: DATA
     });
   },
@@ -40,7 +40,8 @@ const handlerFunctions = {
       itemName,
       itemURL,
       itemPrice,
-      itemCategory
+      itemCategory,
+      isInitialized: false
     }
 
     // Add newItem to DATA
@@ -71,12 +72,13 @@ const handlerFunctions = {
     item.itemURL = itemURL ?? item.itemURL;
     item.itemPrice = +itemPrice ?? item.itemPrice;
     item.itemCategory = itemCategory ?? item.itemCategory;
+    item.isInitialized = true;
     
     console.log(`ITEM AFTER EDITS`, DATA[index]);
     console.log();
 
     res.send({
-      message: "Item data updated",
+      message: "Item data updated successfully",
       updatedItem: item
     })
   }
