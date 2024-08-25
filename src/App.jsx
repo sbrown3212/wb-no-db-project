@@ -16,7 +16,6 @@ const App = () => {
   useEffect(() => {
     axios.get('/api/items')
     .then((response) => {
-      // console.log(`RESPONSE DATA:`, response.data)
       setItemData(response.data.items);
     })
   }, [])

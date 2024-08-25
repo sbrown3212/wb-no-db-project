@@ -32,7 +32,6 @@ const WishlistTable = ({ initialData }) => {
   const deleteItem = (id) => {
     axios.delete(`/api/deleteItem/${id}`)
     .then((res) => {
-      console.log(res.data); // Not showing in console
       setCurrentData(res.data.updatedItems);
     });
   };
@@ -51,7 +50,6 @@ const WishlistTable = ({ initialData }) => {
     // Make POST request and set currentData to DATA array received in response
     axios.post('/api/addItem', newItem)
     .then((res) => {
-      console.log(`res.data`, res.data);
       setCurrentData(res.data.updatedItems);
     })
   }

@@ -15,7 +15,6 @@ const handlerFunctions = {
   deleteItem: (req, res) => {
     // Get id of item to be deleted
     const { id } = req.params;
-    console.log(`DELETE ID:`, id); // Not showing in console
 
     // Remove item from 'MOCKUP_DATA' array
     DATA = DATA.filter((item) => item.id !== +id);
@@ -30,8 +29,6 @@ const handlerFunctions = {
   addItem: (req, res) => {
     // Get body data from request
     const { imgURL, itemName, itemURL, itemPrice, itemCategory } = req.body;
-    // console.log(`req.body`, req.body);
-    // console.log(`DATA.length:`, DATA.length)
 
     // create new object to add to DATA
     const newItem = {
@@ -63,8 +60,6 @@ const handlerFunctions = {
 
     // Get data for item to be edited
     const item = DATA[index];
-    console.log();
-    console.log(`ITEM TO BE EDITED`, DATA[index]);
     
     // Save new data to 'item' object variable
     item.imgURL = imgURL ?? item.imgURL;
@@ -73,9 +68,6 @@ const handlerFunctions = {
     item.itemPrice = +itemPrice ?? item.itemPrice;
     item.itemCategory = itemCategory ?? item.itemCategory;
     item.isInitialized = true;
-    
-    console.log(`ITEM AFTER EDITS`, DATA[index]);
-    console.log();
 
     res.send({
       message: "Item data updated successfully",
