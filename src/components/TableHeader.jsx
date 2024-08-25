@@ -5,8 +5,17 @@ import React from 'react'
 const TableHeader = () => {
   return (
     <tr>
-      <th colSpan={6}>
-        TableHeader
+      <th>
+        Image
+      </th>
+      <th>
+        Item Name
+      </th>
+      <th>
+        Price
+      </th>
+      <th>
+        Category
       </th>
     </tr>
   )

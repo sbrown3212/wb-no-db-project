@@ -3,9 +3,8 @@
 const AddItemButton = ({ addFunc }) => {
   return (
     <tr>
-      <td></td>
-      <td colSpan={4}>
-        <button onClick={addFunc}>AddItemButton</button>
+      <td colSpan={6}>
+        <button onClick={addFunc}>Add Item</button>
       </td>
     </tr>
   )

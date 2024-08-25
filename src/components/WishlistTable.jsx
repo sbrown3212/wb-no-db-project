@@ -58,16 +58,13 @@ const WishlistTable = ({ initialData }) => {
 
   return (
     <>
-      WishlistTable
+      <h1>Wishlist App</h1>
       <table>
         <thead>
           <TableHeader />
         </thead>
 
         <tbody>
-          {/* <ItemRow />
-          <ItemRow />
-          <ItemRow /> */}
           {itemRows}
         </tbody>
 
