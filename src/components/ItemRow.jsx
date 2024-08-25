@@ -4,12 +4,12 @@ import ItemName from './ItemComponents/ItemName.jsx'
 import ItemPrice from './ItemComponents/ItemPrice.jsx'
 import ItemCategory from './ItemComponents/ItemCategory.jsx'
 import DeleteButton from './ItemComponents/DeleteButton.jsx'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const ItemRow = ({ itemData, deleteFunc }) => {
   // Create states for item row fields
-  const [editMode, setEditMode] = useState(false);
+  const [editMode, setEditMode] = useState(!itemData.isInitialized); // if item hasn't been initialized, populate item in edit mode
   const [imgURL, setImageURL] = useState(itemData.imgURL);
   const [itemName, setItemName] = useState(itemData.itemName);
   const [itemURL, setItemURL] = useState(itemData.itemURL);
@@ -19,7 +19,6 @@ const ItemRow = ({ itemData, deleteFunc }) => {
   // Create functions to handle edit mode buttons
   // When edit button is clicked, set 'editMode' to true
   const toEditMode = () => setEditMode(true);
-
   // When save button is clicked:
   const toSavedMode = () => {
     // Create object with current data of item row
