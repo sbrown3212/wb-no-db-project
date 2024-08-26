@@ -23,10 +23,10 @@ The purpose of this wishlist app was to create a way for the user to keep track 
 
 I find myself getting frustrated with CSS quite often. It is definitely possible that I have not spent enough time with it yet, but it seems to me that CSS is a language that has more exceptions to the rule than there are rules that are followed.
 
-I had trouble with css styling with the table element and all the descendants. I intended to make each row appear as though it was a card (I hope this is the correct word for it) with its own background color and radiused corners and space inbetween the other rows. I experimented with the `border-collapse` attribute, but I could not figure out how to get what I wanted because certain descendants of the table element aren't affected by the same properties that affect the table element.
+I had trouble with css styling with the "table" element and all the descendants. I intended to make each row appear as though it was a card (I hope this is the correct way to describe it) with its own background color and radiused corners with space between it and the other rows. I experimented with the `border-collapse` attribute, but I could not figure out how to get what I wanted. What threw me off the most was the fact that certain descendants of the "table" element aren't affected by the same properties that affect the "table" element.
 
 With my limited knowledge of CSS, if I were to have more time, I would probably change the elements from a table to plain `div` elements, but then I am sure I would into the headaches of the columns not aligning how I would expect and would probably need to assign a specific width for each child of the item row. I definitely need to practice more css styling.
 
 ### Defaulting to edit mode when a new item is created
 
-I ended up giving each wishlist item object a property of 'isInitialized' to know when to populate an item in edit mode or normal mode. Is there a better way to do this?
+I ended up giving each wishlist item object a property of `isInitialized` to know when to populate an item in edit mode or normal mode. All items with `isInitialized` set to `false` will be displayed in edit mode, and upon clicking `Save`, the value for `isInitialized` will be set to `true`, preventing that item row from loading in edit mode in the future unless the "Edit" button is clicked. Is there a better way to do this without giving the item data an `isInitialized` property? Could a separate React state be set for the initialized status of a row?
